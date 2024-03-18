@@ -52,7 +52,7 @@ class TicketController extends Controller
             $this->reportError($exception, CommonEnum::LOG_TYPE_ERROR);
             return redirect()->back()->with(CommonEnum::MESSAGE_ERROR, CommonEnum::ERROR_MESSAGE);
         }
-        return redirect()->route("tickets.index". ["event" => $request->event_id])->with(CommonEnum::MESSAGE_SUCCESS, CommonEnum::REGISTER_MESSAGE);
+        return redirect()->route("tickets.index", ["event" => $request->event_id])->with(CommonEnum::MESSAGE_SUCCESS, CommonEnum::REGISTER_MESSAGE);
 
     }
 }
